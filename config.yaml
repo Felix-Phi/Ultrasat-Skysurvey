@@ -1,0 +1,37 @@
+model_directory: "Data/UV SALT 3"
+
+filters:
+  transmission_file: "Data/ULTRASAT_TR.dat"
+  wavelength_file: "Data/wavelength.dat"
+  rdeg_file: "Data/Rdeg.dat"
+
+simulation:
+  template_name: "QinanSalt3"
+  redshift_max: 0.115 
+  start_time: 59000 #mjd
+  duration: 365  # in days
+  dust_extinction: true
+  magnitude_limit: 27 #to speed up the computation: delete all snia with peak ultrasat mag higher than x
+  plot_results: true
+  source_number: 19 #from sources.txt file for LimMag and ZP. 1-35 Spectral Classes of Stars. 19 G5V, 36 BB 2k, 37 4k,38 6k, 39 8k, 40 10k, 41 20k, 42 30k, 43 40k
+
+survey:
+  HighCadence: false
+  time_step: 0.0104167  # 15 minutes steps (1/96 day)
+  slew_time: 0.00104167 # 1.5 minutes for changing the observed field. 
+  pause_start_hour: 0 #start observation at x o'clock. Default: LC=0, HC=3
+  observation_hours: 3 #observe for x hours. Default: LC=3, HC=21
+  Alternative_Survey: false #Option 1 (false): observing cycle over half year. Option 2 (true): Cycle over 45 days and 10 fields.
+  LC_cadence: 4 #visit the fields every x'th day. Only applied when using Option 1. Only 3 (extinction limit applied) or 4 day (not applied) cadence possible.
+  
+  
+
+lightcurves:
+  HC_stacking: true #should the High Cadence be stacked? 
+  HC_stack_number: 12 #number of observations to stack
+  min_sn_ratio: 1 #delete all measurements with sigma<x
+  min_detections: 1 #combined filter: filter index when there are less than x measurements...
+  min_sn_points: 5  #...with S/N>y 
+  max_phase: 20 #maximum of the phase. Qinan SALT3 is only reliable +-20 days around peak
+  plot_overview: true
+  plot_show: false
