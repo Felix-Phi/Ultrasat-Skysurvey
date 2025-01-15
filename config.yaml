@@ -1,4 +1,4 @@
-model_directory: "Data/UV SALT 3"
+template_directory: "Data/UV SALT 3"
 
 filters:
   transmission_file: "Data/ULTRASAT_TR.dat"
@@ -31,7 +31,7 @@ lightcurves:
   HC_stack_number: 12 #number of observations to stack
   min_sn_ratio: 1 #delete all measurements with sigma<x
   min_detections: 1 #combined filter: filter index when there are less than x measurements...
-  min_sn_points: 5  #...with S/N>y 
+  min_sn_points: 1  #...with S/N>y 
   max_phase: 20 #maximum of the phase. Qinan SALT3 is only reliable +-20 days around peak
   plot_overview: true
   plot_show: false

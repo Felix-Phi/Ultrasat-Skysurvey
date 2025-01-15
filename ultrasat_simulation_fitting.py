@@ -11,7 +11,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "Modules"))
 
 
-from models import create_salt3_model
+from templates import create_salt3_template
 from simulation import simulate_snia_events, plot_snia_data, convert_drawn_data_to_instance
 from filters import register_ultrasat_bands
 from survey_plan import (
@@ -43,8 +43,8 @@ def main():
 
     # Create the SALT3 model
     try:
-        model = create_salt3_model(config["model_directory"])
-        print("SALT3 model successfully created and registered!")
+        model = create_salt3_template(config["template_directory"])
+        print("SALT3 template successfully created and registered!")
     except FileNotFoundError as e:
         print(f"Error: {e}")
         return

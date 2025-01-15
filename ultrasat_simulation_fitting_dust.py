@@ -9,7 +9,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "Modules"))
 
 
-from models import create_salt3_model_dust
+from templates import create_salt3_template_dust
 from simulation import simulate_snia_events_dust, plot_snia_data_dust, convert_drawn_data_to_instance
 from filters import register_ultrasat_bands
 from survey_plan import (
@@ -41,7 +41,7 @@ def main():
 
     # Create the SALT3 model
     try:
-        modeldust = create_salt3_model_dust(config["model_directory"])
+        modeldust = create_salt3_template_dust(config["template_directory"])
         print("SALT3 model with dust effect successfully created and registered!")
     except FileNotFoundError as e:
         print(f"Error: {e}")

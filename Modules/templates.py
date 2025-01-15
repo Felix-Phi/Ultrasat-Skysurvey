@@ -1,7 +1,7 @@
 import os
 import sncosmo
 
-def create_salt3_model(model_dir):
+def create_salt3_template(model_dir):
     """
     Creates and registers a custom SALT3 model in SNCosmo.
 
@@ -43,7 +43,7 @@ def create_salt3_model(model_dir):
     # Return the SNCosmo model using the custom source
     return sncosmo.Model(source="QinanSalt3")
 
-def create_salt3_model_dust(model_dir):
+def create_salt3_template_dust(model_dir):
     """
     Creates and registers a custom SALT3 model in SNCosmo and add the dust parameters RV and EBV.
 
