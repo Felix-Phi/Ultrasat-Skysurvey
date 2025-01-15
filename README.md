@@ -37,8 +37,8 @@ The `Modules` folder contains the scripts that are called by the main scripts. S
 ### Data
 The `Data` folder contains text files from external sources, mostly from Yossi Shvartzvald regarding ULTRASAT specifics, as well as the UV-improved SALT3 template by Qinan Wang.
 
-## Instructions
-To adapt the simulation for another type of transients, I would expect the following steps to run the code. Note that the current code does not fully support all of these steps, so modifications might be required:
+## Instructions:
+To adapt the simulation for **another type of transients**, I would expect the following steps to run the code. Note that the current code does not fully support all of these steps, so modifications might be required:
 
 0. **Read the documentation** about [transients](https://skysurvey.readthedocs.io/en/latest/quickstart/quickstart_target.html) in the Skysurvey wiki.
 1. **Import the template** of the transient you want to simulate to the `Data` folder. Update the path in `config.yaml` under `template_directory`. Optionally, modify names in `templates.py` and `config.yaml` as needed.
