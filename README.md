@@ -48,7 +48,7 @@ To adapt the simulation for **another type of transients**, I would expect the f
    - Compare your template with the available sources to determine which spectrum is closest.
    - For blackbodies, there is existing code in `simulation.py` and `ultrasat_simulation_lightcurves_Blackbody.py`.
    - For stellar templates, refer to [this website](http://cdsarc.u-strasbg.fr/viz-bin/ftp-index?J/PASP/110/863).
-   - Set the according number for `source_number` in `config.yaml`.
+   - Set the according number for `source_number` in `config.yaml`. You find the sources and corresponding numbers in `Sources.txt` under the `Data` folder.
 5. **Configure and run**:
    - Decide on all the other parameters in `config.yaml`.
    - Run `ultrasat_simulation_lightcurves.py`.
