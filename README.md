@@ -37,8 +37,8 @@ The `Modules` folder contains the scripts that are called by the main scripts. S
 ### Data
 The `Data` folder contains text files from external sources, mostly from Yossi Shvartzvald regarding ULTRASAT specifics, as well as the UV-improved SALT3 template by Qinan Wang.
 
-## Instructions
-To adapt the simulation for another type of transients, I would expect the following steps to run the code. Note that the current code does not fully support all of these steps, so modifications might be required:
+## Instructions:
+To adapt the simulation for **another type of transients**, I would expect the following steps to run the code. Note that the current code does not fully support all of these steps, so modifications might be required:
 
 0. **Read the documentation** about [transients](https://skysurvey.readthedocs.io/en/latest/quickstart/quickstart_target.html) in the Skysurvey wiki.
 1. **Import the template** of the transient you want to simulate to the `Data` folder. Update the path in `config.yaml` under `template_directory`. Optionally, modify names in `templates.py` and `config.yaml` as needed.
@@ -48,7 +48,7 @@ To adapt the simulation for another type of transients, I would expect the follo
    - Compare your template with the available sources to determine which spectrum is closest.
    - For blackbodies, there is existing code in `simulation.py` and `ultrasat_simulation_lightcurves_Blackbody.py`.
    - For stellar templates, refer to [this website](http://cdsarc.u-strasbg.fr/viz-bin/ftp-index?J/PASP/110/863).
-   - Set the according number for `source_number` in `config.yaml`.
+   - Set the according number for `source_number` in `config.yaml`. You find the sources and corresponding numbers in `Sources.txt` under the `Data` folder.
 5. **Configure and run**:
    - Decide on all the other parameters in `config.yaml`.
    - Run `ultrasat_simulation_lightcurves.py`.
