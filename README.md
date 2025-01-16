@@ -3,7 +3,7 @@
 This is a set of Python script for deriving an estimated rate of usable SNeIa observations by ULTRASAT. The goal is to make it usable for any transient. It is not optimized for public use yet, even though the important parts are included.
 
 ## IMPORTANT:
-This repository contains work in progress and unpublished data. Please do not distribute or share it publicly. 
+This repository contains work in progress and unpublished data. **Please do not distribute or share it publicly.** 
 Particularly, the content of the `Data` folder is mostly not published yet.
 
 
