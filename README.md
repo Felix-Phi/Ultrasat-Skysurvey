@@ -43,7 +43,7 @@ To adapt the simulation for **another type of transients**, I would expect the f
 0. **Read the documentation** about [transients](https://skysurvey.readthedocs.io/en/latest/quickstart/quickstart_target.html) in the Skysurvey wiki.
 1. **Import the template** of the transient you want to simulate to the `Data` folder. Update the path in `config.yaml` under `template_directory`. Optionally, modify names in `templates.py` and `config.yaml` as needed.
 2. **Update the event rates**: Incorporate the expected yearly rates over the full sky of these transients by updating the `num_events` line under `def simulate_snia_events` in the module `simulation.py`.
-3. **Create a transient model**: Understand how transient models work in Skysurvey and create a new model. The model should depend on the template you are using and realistically reflect the distribution of template parameters in nature. As skysurvey comes only with an SNIa model, this step requires sustantial changes in the code, but skysurvey provides a possibility to integrate other transient models.
+3. **Create a transient model**: Understand how transient models work in Skysurvey and create a new model. The model should depend on the template you are using and realistically reflect the distribution of template parameters in nature. As skysurvey comes only with an SNIa model, this step requires substantial changes in the code, but skysurvey provides a possibility to integrate other transient models.
 4. **Select a limiting magnitude source**:
    - Compare your template with the available sources to determine which spectrum is closest.
    - For blackbodies, there is existing code in `simulation.py` and `ultrasat_simulation_lightcurves_Blackbody.py`.
