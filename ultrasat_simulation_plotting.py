@@ -8,6 +8,7 @@ import skysurvey.survey.polygon as surveypolygon
 import pandas as pd
 import matplotlib.pyplot as plt
 import sncosmo
+import numpy as np
 from datetime import datetime
 from multiprocessing import Pool
 warnings.filterwarnings("ignore", category=FutureWarning, module="skysurvey")
@@ -25,9 +26,10 @@ from survey_plan import (
     generate_field_coordinates_option1,
     generate_field_coordinates_option2,
     prepare_survey,
-    add_survey_properties
+    add_survey_properties,
+    zp_func_to_radoffset
 )
-from lightcurves import initialize_dataset,stack_high_cadence_data, process_lightcurve_data
+from lightcurves import initialize_dataset,stack_high_cadence_data, process_lightcurve_data,calculate_magnitude
 from plotting import extract_data_for_plotting, plot_survey_overview, generate_unique_filename
 
 
@@ -325,6 +327,50 @@ def main():
                 plot_show=plot_show,
                 folder="Lightcurves/filtered_overviews"
             )
+    ultrasat_lightcurves.set_data(backup_lightcurves)
+    backup_lightcurves['mag_bright'] = backup_lightcurves.apply(lambda row:row["mag"]-calculate_magnitude(row['flux']+row['fluxerr'], row['zp']), axis=1)
+
+    backup_lightcurves['mag_dim'] = backup_lightcurves.apply(lambda row:-row["mag"]+calculate_magnitude(row['flux']-row['fluxerr'], row['zp']), axis=1)
+    ultrasat_lightcurves.set_data(backup_lightcurves)
+    #plot the lightcurves
+    print("Plotting lightcurves...")
+    for i in ultrasat_lightcurves.data.index.get_level_values(0).unique()[:50]:
+        df_index = ultrasat_lightcurves.data.loc[i]
+        # Create the scatter plot
+        plt.figure(figsize=(7, 7))
+        plt.rcParams.update({'font.size': 18})
+        plt.errorbar(df_index['phase'], df_index['mag'], yerr=[df_index['mag_bright'], df_index['mag_dim']],
+                    ecolor="gray", fmt='none', ls="None", elinewidth=2, alpha=1, zorder=1)
+        plt.scatter(df_index['phase'], df_index['mag'], s=30, color="tab:blue",
+                    label="Simulated light curve", zorder=2)
+        
+        # Achsen und Titel
+        plt.gca().invert_yaxis() 
+        plt.xlim(-22, 20)
+        plt.ylim(26, 16)
+        
+        # Weitere Informationen in der Legende
+        plt.plot([], [], " ", label=("z = " + str(ultrasat_lightcurves.data.loc[i].iloc[0]["z"])))
+        plt.plot([], [], " ", label=("c = " + str(ultrasat_lightcurves.data.loc[i].iloc[0]["c"])))
+        
+        # Alle einzigartigen zp-Werte aus der Gruppe abrufen
+        zp_values = ultrasat_lightcurves.data.loc[i]["zp"].unique()
+        
+        # Prüfen, ob es mehr als einen Wert gibt
+        if len(zp_values) > 1:
+            for idx, zp_val in enumerate(zp_values, start=1):
+                radial_offset = zp_func_to_radoffset(zp_val)
+                plt.plot([], [], " ", label=f"radial offset #{idx} = {round(radial_offset, 2)}")
+        else:
+            radial_offset = zp_func_to_radoffset(zp_values[0])
+            plt.plot([], [], " ", label=f"radial offset = {round(radial_offset, 2)}")
+        
+        plt.xlabel('Phase in days')
+        plt.ylabel('Brightness in mag')
+        plt.legend(loc="best", fontsize=18)
+        plt.savefig("Lightcurves/plots_lightcurves/survey_example_" + str(i) + ".png",
+                    dpi=600, bbox_inches='tight')
+    
     
    
 

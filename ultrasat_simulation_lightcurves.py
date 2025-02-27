@@ -25,7 +25,8 @@ from survey_plan import (
     generate_field_coordinates_option1,
     generate_field_coordinates_option2,
     prepare_survey,
-    add_survey_properties
+    add_survey_properties,
+    zp_func_to_radoffset
 )
 from lightcurves import initialize_dataset,stack_high_cadence_data, process_lightcurve_data
 from plotting import extract_data_for_plotting, plot_survey_overview, generate_unique_filename
@@ -93,7 +94,7 @@ def main():
     # Convert the drawn data to model instance
     print("Convert drawn data to model instance..")
     sniainstance = convert_drawn_data_to_instance(template_name, sniadata,sniamodel)
-    #print(sniainstance.data.head(10))
+    print(sniainstance.data.head(10))
     
     #_________________________________________________________-
     #SURVEY PLAN
@@ -250,6 +251,7 @@ def main():
     max_phase=lightcurve_config["max_phase"]
     plot_overview=lightcurve_config["plot_overview"]
     plot_show=lightcurve_config["plot_show"]
+    plot_lightcurves=lightcurve_config["plot_lightcurves"]
 
 
     # Initialize the lightcurve dataset
@@ -320,7 +322,31 @@ def main():
             plot_show=plot_show,
             folder="Lightcurves/overviews"
         )
-    
+    #plot the lightcurves
+    if plot_lightcurves:
+        print("Plotting lightcurves...")
+        for i in ultrasat_lightcurves.data.index.get_level_values(0).unique()[:50]:
+            df_index=ultrasat_lightcurves.data.loc[i]
+                # Create the scatter plot
+            plt.figure(figsize=(7, 7))
+            plt.rcParams.update({'font.size': 18})
+            plt.errorbar(df_index['phase'], df_index['mag'], yerr=df_index['magerr'],ecolor="gray", fmt='none', ls="None", elinewidth=2,alpha=1,zorder=1)
+            plt.scatter(df_index['phase'], df_index['mag'],s=30,color="tab:blue",label="Simulated light curve",zorder=2)
+            # Achsen und Titel
+            plt.gca().invert_yaxis() 
+            plt.xlim(-22,20)
+            plt.ylim(26,16)
+            #plt.plot(np.linspace(-20, 20, 100),line_mag,color="tab:blue",label="full lightcurve by")
+            #plt.plot([],[]," ",label=("improved Salt3"))
+            #plt.axhline(y=22.5,linestyle="-",color="green",label="limiting magnitude 22.5mag")
+            plt.plot([],[]," ",label=("z="+str(ultrasat_lightcurves.data.loc[i].iloc[0]["z"])))
+            plt.plot([],[]," ",label=("c="+str(ultrasat_lightcurves.data.loc[i].iloc[0]["c"])))
+            plt.plot([],[]," ",label=("radial offset="+str(round(zp_func_to_radoffset(ultrasat_lightcurves.data.loc[i].iloc[0]["zp"]),2))))
+            plt.xlabel('Phase in days')
+            plt.ylabel('Brightness in mag')
+            #plt.title("Example simulation lightcurve")
+            plt.legend(loc="best",fontsize=18)
+            plt.savefig("Lightcurves/plots_lightcurves/survey_example_"+str(i)+".png", dpi=600, bbox_inches='tight')
    
 
 
@@ -330,6 +356,6 @@ def main():
 #    main()
 
 if __name__ == "__main__":
-    for i in range(20):
+    for i in range(50):
         print(f"run {i + 1}:")
         main()

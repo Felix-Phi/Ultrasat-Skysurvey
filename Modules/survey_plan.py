@@ -288,6 +288,16 @@ def fieldid_to_offset(fieldid,ra,dec):
 def zp_func(x):
     return -0.0009710343981592274 * (x**2) - 0.01175220195794804 * x + 28.274194689718108 #Fitted from Yossis Data
 
+def zp_func_to_radoffset(zp):
+    a = -0.0009710343981592274
+    b = -0.01175220195794804
+    c = 28.274194689718108
+    
+    discriminant = b**2 - 4*a*(c - zp)
+    radoffset = (-b - np.sqrt(discriminant)) / (2 * a)
+    
+    return radoffset
+
 
 def maglim_func_fit(x):
     return 0.0008986513787289712 * (x**4) - 0.026248428814867934 * (x**3) + \

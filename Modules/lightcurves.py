@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from skysurvey import DataSet
 import skysurvey
+from tqdm import tqdm
 
 def initialize_dataset(snia_data, survey):
     """
@@ -204,6 +205,50 @@ def filter_data_rates(dataset,min_sn_ratio=1, min_sn_points=3, min_detections=5,
 
     # Step 4: Remove data points with phase outside [-max_phase, max_phase]
     data = data[abs(data["phase"]) < max_phase]
+
+    #Step 5: add explosion time
+    data["explosion_phase"] = np.nan
+    data["time_after_explosion"] = np.nan
+
+    # Group the DataFrame by the first index level
+    cache = {}
+    precision = 3  # Rundung auf 3 Dezimalstellen
+
+    # Gruppiere nach dem ersten Level des Multiindex
+    groups = list(data.groupby(level=0))
+    for first_idx, group in tqdm(groups, desc="Verarbeite Gruppen"):
+        rep = group.iloc[0]
+        # Erstelle einen Schlüssel, indem du die Parameter rundest
+        key = (round(rep["z"], precision),
+            round(rep["x0"], precision),
+            round(rep["x1"], precision),
+            round(rep["c"], precision),
+            round(rep["zp"], precision))
+        
+        if key not in cache:
+            times = np.linspace(-20, -10, 1000)
+            model = sncosmo.Model(source='QinanSalt3')
+            model.set(z=rep["z"], x0=rep["x0"], x1=rep["x1"], c=rep["c"])
+            flux = model.bandflux('ztfg', times, zp=rep["zp"], zpsys='ab')
+            dflux_dt = np.gradient(flux, times)
+            threshold = 1e-1
+            positive_deriv_indices = np.where(dflux_dt > threshold)[0]
+            if len(positive_deriv_indices) == 0:
+                explosion_phase = np.nan
+            else:
+                explosion_phase = times[positive_deriv_indices[0]]
+            cache[key] = explosion_phase
+        else:
+            explosion_phase = cache[key]
+        
+        # Weise den berechneten explosion_phase allen Zeilen in der Gruppe zu
+        data.loc[first_idx, "explosion_phase"] = explosion_phase
+        # Berechne time_after_explosion individuell für jede Zeile
+        data.loc[first_idx, "time_after_explosion"] = group["phase"] - explosion_phase
+
+
+
+
 
     return data
 

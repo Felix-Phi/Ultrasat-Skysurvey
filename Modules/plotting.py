@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
 
 
 def extract_data_for_plotting(lightcurves, sniainstance):
@@ -74,52 +75,67 @@ def plot_survey_overview(data, min_sn_points,min_detections,hilocadence,duration
         indices (list): List of valid supernova indices.
         output_file (str): File name for saving the plot.
     """
-    # Create the scatter plot
-    plt.figure(figsize=(9, 7))
-    plt.rcParams.update({'font.size': 15})
-    plt.gca().invert_yaxis()
+
     
+    control_points = [
+    (0.0,    "#3b4cc0"),
+    (0.125, "#f7f7f7"),
+    (0.25, "#b40426"),
+    (1.0,    "#300000"),
+    ]
+    custom_cmap = mcolors.LinearSegmentedColormap.from_list(
+    "coolwarm_extended",
+    control_points
+    )
+    norm = mcolors.Normalize(vmin=-0.15, vmax=1.05, clip=True)
+
+    # Create the scatter plot
+    plt.figure(figsize=(8, 7))
+    plt.rcParams.update({'font.size': 18})
+    plt.gca().invert_yaxis()
+
     # Scatter plot with color-coded reddening (c)
     scatter = plt.scatter(
         data['z'],                     # X-axis: Redshift
         data['USAT mag'],           # Y-axis: Minimum observed magnitude
         c=data['c'],                   # Color scale: Reddening
-        cmap='coolwarm',               # Colormap
-        vmin=-0.15,
-        vmax=0.15,
-        edgecolor='black',
-        s=100,                         # Point size
-        label=("SNIa with ≤"+str(min_detections)+" detectable Obs. (S/N>"+str(min_sn_points)+")")
+        cmap=custom_cmap, norm=norm,
+        edgecolor='black',linewidths=0.3,
+        s=60,                       # Point size
+        label=("SNIa with ≥"+str(min_detections)+" data points\nsurpassing S/N>"+str(min_sn_points))
     )
 
     # Add a colorbar for the reddening scale
     cbar = plt.colorbar(scatter)
-    cbar.set_label('Reddening c')
+    cbar.set_label('Color parameter c')
 
     # Annotate plot with the number of detectable SNIas
-    plt.plot([], [], " ", label=f"# of detectable SNeIa = {len(data)}")
+    plt.plot([], [], " ", label=f"# of SNeIa above S/N = {len(data)}")
 
     # Add a horizontal line for the limiting magnitude
     #plt.axhline(y=22.5, linestyle="-", color="green", label="Limiting magnitude 22.5 mag")
-    plt.rcParams.update({'font.size': 13})
+    plt.rcParams.update({'font.size': 15})
     # Set plot labels and title
     plt.xlabel('Redshift z')
-    plt.ylabel('Observed Ultrasat magnitude')
+    plt.ylabel('ULTRASAT magnitude of brightest data point')
     if Alternative_Survey and hilocadence=="Low Cadence":
-        plt.title("1 day "+hilocadence+" Survey Simulation Over "+str(duration)+" days. Option 2.")
+        #plt.title("1 day "+hilocadence+" Survey Simulation Over "+str(duration)+" days. Option 2.")
+        plt.title("Option 2 1-day "+hilocadence+" Simulation.")
     elif hilocadence=="Low Cadence":
-        plt.title(str(cadence)+" days "+hilocadence+" Survey Simulation Over "+str(duration)+" days.")
+        #plt.title(str(cadence)+" days "+hilocadence+" Survey Simulation Over "+str(duration)+" days.")
+        plt.title("Option 1 "+str(cadence)+"-day "+hilocadence+" Simulation.")
     elif hilocadence=="High Cadence":
-        plt.title(hilocadence+" Survey Simulation Over "+str(duration)+" days.")
+        #plt.title(hilocadence+" Survey Simulation Over "+str(duration)+" days.")
+        plt.title("16.5-min "+hilocadence+" Simulation.")
     else:
         raise "Something went wrong in the plotting."
 
     # Adjust plot limits
-    plt.xlim(0, 0.12)
-    plt.ylim(25, 16)
+    plt.xlim(0, 0.132)
+    plt.ylim(26, 16)
 
     # Add legend
-    plt.legend(fontsize=15)
+    plt.legend(fontsize=15,loc="upper right")
 
     # Save and display the plot
     output_file = generate_unique_filename(folder,output_file)

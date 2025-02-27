@@ -3,6 +3,10 @@ import os
 import hashlib
 import pickle
 import warnings
+import matplotlib.pyplot as plt
+import skysurvey
+import pandas as pd
+from datetime import datetime
 warnings.filterwarnings("ignore", category=FutureWarning, module="skysurvey")
 
 import sys
@@ -15,9 +19,11 @@ from filters import register_ultrasat_bands
 from survey_plan import (
     create_footprint,
     generate_time_array,
-    generate_field_coordinates,
+    generate_field_coordinates_option1,
+    generate_field_coordinates_option2,
     prepare_survey,
     add_survey_properties,
+    zp_func_to_radoffset
 )
 from lightcurves import initialize_dataset,stack_high_cadence_data, process_lightcurve_data
 from plotting import extract_data_for_plotting, plot_survey_overview
@@ -65,8 +71,10 @@ def main():
     redshift_max = sim_config["redshift_max"]
     start_time = sim_config["start_time"]
     duration = sim_config["duration"]
+    dust_extinction=sim_config["dust_extinction"]
     magnitude_limit = sim_config["magnitude_limit"]
     plot_results = sim_config["plot_results"]
+    source_number=sim_config["source_number"]
 
     # Simulate SNIa events
     print("Simulating SNIa events...")
@@ -75,6 +83,7 @@ def main():
         redshift_max=redshift_max,
         start_time=start_time,
         duration=duration,
+        dust_extinction=dust_extinction,
         magnitude_limit=magnitude_limit,
     )
     print(f"Simulated {len(sniadata)} events passing the magnitude filter.")
@@ -95,9 +104,11 @@ def main():
     survey_config = config["survey"]
     HighCadence=survey_config["HighCadence"]
     time_step=survey_config["time_step"]
+    slew_time=survey_config["slew_time"]
     pause_start_hour=survey_config["pause_start_hour"]
     observation_hours=survey_config["observation_hours"]
     LC_cadence=survey_config["LC_cadence"]
+    Alternative_Survey=survey_config["Alternative_Survey"]
 
     #Check if we already have the survey in the cache.
     #It is repetitive and takes a lot of time to compute.
@@ -110,7 +121,8 @@ def main():
         'HighCadence': HighCadence,
         'time_step': time_step,
         'pause_start_hour': pause_start_hour,
-        'observation_hours': observation_hours
+        'observation_hours': observation_hours,
+        "source_number": source_number
         }
         hilocadence="High Cadence"
     else:
@@ -118,10 +130,12 @@ def main():
         'start_time': start_time,
         'duration': duration,
         'HighCadence': HighCadence,
-        'time_step': time_step,
+        'time_step': time_step+slew_time,
         'pause_start_hour': pause_start_hour,
         'observation_hours': observation_hours,
-        'LC_cadence': LC_cadence
+        "source_number": source_number,
+        'LC_cadence': LC_cadence,
+        "Alternative_Survey": Alternative_Survey
         }
         hilocadence="Low Cadence"
 
@@ -130,12 +144,13 @@ def main():
     param_hash = hashlib.md5(param_string.encode('utf-8')).hexdigest()
 
     cache_dir="Cache"
-    cache_filename = os.path.join(cache_dir, f"survey_{param_hash}.pkl")
+    cache_filename = os.path.join(cache_dir, f"survey_{param_hash}.parquet")
 
     if os.path.exists(cache_filename):
         print("Cached survey data found. Loading survey from file...")
-        with open(cache_filename, 'rb') as f:
-            survey = pickle.load(f)
+        survey_df=pd.read_parquet(cache_filename)
+        survey=skysurvey.Survey()
+        survey.set_data(survey_df)
 
     else:
         print("No cached survey data found. Generating survey...")
@@ -148,31 +163,49 @@ def main():
         print("Generating observation time array...")
 
 
-
-        mjd_times = generate_time_array(
-                start_day=start_time,
-                end_day=start_time+duration,
-                time_step=time_step,
-                observation_hours=observation_hours,
-                pause_start_hour=pause_start_hour,
-            )
         if HighCadence:
+            mjd_times = generate_time_array(
+                    start_day=start_time,
+                    end_day=start_time+duration,
+                    time_step=time_step,
+                    observation_hours=observation_hours,
+                    pause_start_hour=pause_start_hour,
+                )
+        
             #HC observes only one spot.
-            ra=[320]*len(mjd_times)
-            dec=[70]*len(mjd_times)
+            ra=[57]*len(mjd_times)
+            dec=[-47]*len(mjd_times)
 
 
         else:
-            # Generate RA and Dec field coordinates for the LC
-            print("Generating field coordinates...")
-            ra, dec = generate_field_coordinates(
-                start_day=start_time,
-                end_day=start_time+duration,
-                time_step=time_step,
-                observation_hours=observation_hours,
-                pause_start_hour=pause_start_hour,
-                cadence=LC_cadence
-            )
+            mjd_times = generate_time_array(
+                    start_day=start_time,
+                    end_day=start_time+duration,
+                    time_step=time_step+slew_time,
+                    observation_hours=observation_hours,
+                    pause_start_hour=pause_start_hour,
+                )
+            if Alternative_Survey:
+                # Generate RA and Dec field coordinates for the LC in second option survey plan.
+                print("Generating field coordinates...")
+                ra, dec = generate_field_coordinates_option2(
+                    start_day=start_time,
+                    end_day=start_time+duration,
+                    time_step=time_step+slew_time,
+                    observation_hours=observation_hours,
+                    pause_start_hour=pause_start_hour
+                )
+            else:
+                # Generate RA and Dec field coordinates for the LC in first option survey.
+                print("Generating field coordinates...")
+                ra, dec = generate_field_coordinates_option1(
+                    start_day=start_time,
+                    end_day=start_time+duration,
+                    time_step=time_step+slew_time,
+                    observation_hours=observation_hours,
+                    pause_start_hour=pause_start_hour,
+                    cadence=LC_cadence
+                )
 
         # Create survey data structure
         print("Create survey data structure...")
@@ -186,23 +219,27 @@ def main():
             "skynoise": 0, #changed in the next step
         }
         survey = prepare_survey(data, footprint=footprint)
+        
 
         # Add calculated properties to the survey data
         print("Adding calculated properties to the survey data...")
-        survey_df = survey.data
-        survey_df = add_survey_properties(survey_df)
-        
-        survey.set_data(survey_df)
-    
-        # Save survey to cache file
-        print("Saving survey to cache file...")
-        with open(cache_filename, 'wb') as f:
-            pickle.dump(survey, f)
+        survey_df = survey.data.copy()
+        survey_df = add_survey_properties(survey_df,source_number=source_number)
 
+        survey.set_data(survey_df)
+
+        survey.show()
+        fig = plt.gcf()  # Get current figure
+        fig.savefig(cache_filename+"_sky_coverage.png", dpi=300)
+
+        # Save survey to cache file
+
+        print("Saving survey to cache file...")
+        survey_df.to_parquet(cache_filename)
 
     # Display results
-    print("Survey preparation complete. Displaying sample data:")
-    print(survey.data.head(10))
+    #print("Survey preparation complete. Displaying sample data:")
+    #print(survey.data.head(10))
 
     #_____________________________________________________
     #LIGHTCURVES
@@ -211,11 +248,12 @@ def main():
     HC_stacking=lightcurve_config["HC_stacking"]
     HC_stack_number=lightcurve_config["HC_stack_number"]
     min_sn_ratio=lightcurve_config["min_sn_ratio"]
-    min_sn_points=lightcurve_config["min_sn_points"]
-    min_detections=lightcurve_config["min_detections"]
+    min_sn_points=3
+    min_detections=3
     max_phase=lightcurve_config["max_phase"]
     plot_overview=lightcurve_config["plot_overview"]
     plot_show=lightcurve_config["plot_show"]
+    plot_lightcurves=lightcurve_config["plot_lightcurves"]
 
 
     # Initialize the lightcurve dataset
@@ -243,8 +281,8 @@ def main():
     if plot_overview:
         print("Extracting data for plotting...")
         filtered_data, highest_mag_list = extract_data_for_plotting(ultrasat_lightcurves, sniainstance)
-        print(highest_mag_list)
-        print("Generating survey overview plot...")
+        #print(highest_mag_list)
+        print("Generating and saving survey overview plot...")
         plot_survey_overview(
             data=filtered_data,
             min_sn_points=min_sn_points,
@@ -252,8 +290,11 @@ def main():
             hilocadence=hilocadence,
             duration=duration,
             observation_hours=observation_hours,
-            output_file="survey_Overview.png",
-            plot_show=plot_show
+            cadence=LC_cadence, 
+            Alternative_Survey=Alternative_Survey,
+            output_file=f"survey_Overview_{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}.png",
+            plot_show=plot_show,
+            folder="Results"
         )
     
     #_______________________________________________________________
@@ -290,7 +331,7 @@ def main():
     print("Processing the lightcurve data for ZTF...")
     ztf_lightcurves = process_lightcurve_data(
                                            dataset=ztf_dataset,simulation=sniainstance, min_sn_ratio=min_sn_ratio,
-                                           min_sn_points=min_sn_points, min_detections=min_detections, max_phase=100
+                                           min_sn_points=10, min_detections=min_detections, max_phase=100
                                             )
 
 
@@ -331,7 +372,27 @@ def main():
         ztf_lightcurves=ztf_lightcurves,
         sniadata=sniainstance.data,
         sorted_indices=combined_indices_sorted_by_mag,
-        model=modeldust
+        model=modeldust,
+        rv=1,
+        folder="rv1"
+    )
+    results_table = build_results_table_dust(
+        combined_lightcurves=combined_lightcurves,
+        ztf_lightcurves=ztf_lightcurves,
+        sniadata=sniainstance.data,
+        sorted_indices=combined_indices_sorted_by_mag,
+        model=modeldust,
+        rv=2,
+        folder="rv2"
+    )
+    results_table = build_results_table_dust(
+        combined_lightcurves=combined_lightcurves,
+        ztf_lightcurves=ztf_lightcurves,
+        sniadata=sniainstance.data,
+        sorted_indices=combined_indices_sorted_by_mag,
+        model=modeldust,
+        rv=3.1,
+        folder="rv3.1"
     )
 
     # Display results
