@@ -96,6 +96,8 @@ def main():
     # Convert the drawn data to model instance
     print("Convert drawn data to model instance..")
     sniainstance = convert_drawn_data_to_instance(modeldust, sniadata,sniamodel)
+    print("SNIa instance parameters:")
+    print(sniainstance.template_parameters)
     print(sniainstance.data.head(10))
     
     #_________________________________________________________-
@@ -253,7 +255,6 @@ def main():
     max_phase=lightcurve_config["max_phase"]
     plot_overview=lightcurve_config["plot_overview"]
     plot_show=lightcurve_config["plot_show"]
-    plot_lightcurves=lightcurve_config["plot_lightcurves"]
 
 
     # Initialize the lightcurve dataset
@@ -324,6 +325,8 @@ def main():
         print("Saving ztf_survey to cache file...")
         with open(cache_filename, 'wb') as f:
             pickle.dump(ztf_survey, f)
+
+    print(ztf_survey.data.head(10))
 
     print("Initialize the lightcurve dataset for ZTF...")
     ztf_dataset = initialize_dataset(sniainstance, ztf_survey)

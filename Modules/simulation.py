@@ -25,10 +25,12 @@ def simulate_snia_events(template_name, redshift_max, start_time, duration,dust_
         pandas.DataFrame: Simulated SNIa events with additional magnitude data.
     """
     # Initialize SNIa simulation object
+    
     snia = skysurvey.SNeIa()
     snia.set_template(template_name)
     if dust_extinction:
         snia.add_effect(effect=effects.mw_extinction)
+
     
     # Draw supernova events
     num_events = int(snia.get_rate(redshift_max) / (365/duration))
@@ -37,20 +39,18 @@ def simulate_snia_events(template_name, redshift_max, start_time, duration,dust_
                          tstart=start_time, tstop=start_time + duration, inplace=True)
 
     # Calculate observed magnitudes in the specified band
-    target_magnitudes = []
-    for j in range(len(sniadata)):
-        mag = snia.get_target_mag(j, band="ultrasat_band_0.00", phase=0, magsys="ab", restframe=True)
-        target_magnitudes.append(mag)
-    sniadata["US-Band"] = target_magnitudes
+    #target_magnitudes = []
+    #for j in range(len(sniadata)):
+    #    mag = snia.get_target_mag(j, band="ultrasat_band_0.00", phase=0, magsys="ab", restframe=True)
+    #    target_magnitudes.append(mag)
+    #sniadata["US-Band"] = target_magnitudes
 
     # Apply magnitude filter
-    sniadata = sniadata[sniadata["US-Band"] <= magnitude_limit]
-    sniadata = sniadata.reset_index(drop=True)
+    #sniadata = sniadata[sniadata["US-Band"] <= magnitude_limit]
+    #sniadata = sniadata.reset_index(drop=True)
     
-    # Take the model for future usage
-    sniamodel=snia
 
-    return sniadata,sniamodel
+    return sniadata,snia
 
 def simulate_blackbody_events(start_time,duration,temperature):
     phase = np.linspace(-100, 100, 50) # phase definition range
@@ -121,8 +121,9 @@ def convert_drawn_data_to_instance(template_name, sniadata, sniamodel):
         model instance of the drawn data
     """
     
-
     sniainstance = sniamodel.from_data(sniadata, template=template_name)
+    sniainstance.template.add_effect(effects.mw_extinction)
+    
     return sniainstance
 
 #_______________________________________
@@ -149,15 +150,15 @@ def simulate_snia_events_dust(template_name, redshift_max, start_time, duration,
 
     SNeIa._MODEL["hostebv"] = {
         "func": np.random.exponential,
-        "kwargs": {"scale": 0.05}  # Is this realistic?
+        "kwargs": {"scale": 0.11}  # Holwerda_2014
     }
     SNeIa._MODEL["c"] = {"func": np.random.uniform,"kwargs": {"low":0, "high":0} }
 
 
     snia = SNeIa()
     snia.set_template(template_name)
-    if dust_extinction:
-        snia.add_effect(effect=effects.mw_extinction)
+    #if dust_extinction:
+    #    snia.add_effect(effect=effects.mw_extinction)
     #Link the drawn dust values to the dust effect.
 
     host_effect = Effect(effect=sncosmo.CCM89Dust(), name="host", frame="rest")

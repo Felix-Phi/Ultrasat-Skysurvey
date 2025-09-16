@@ -37,6 +37,10 @@ def create_salt3_template(model_dir):
         lcrv01file=lcrv01file,
     )
 
+    #Add the dust effect as parameters
+    sncosmo.Model(source=salt3_source,effects=[sncosmo.CCM89Dust()],effect_names=["mw"],effect_frames=["rest"])
+
+
     # Register the source in SNCosmo (force=True in case it is already registered)
     sncosmo.registry.register(salt3_source, name="QinanSalt3", force=True)
 

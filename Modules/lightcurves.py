@@ -164,10 +164,88 @@ def process_lightcurve_data(dataset,simulation, min_sn_ratio=1, min_sn_points=3,
 
     return dataset
 
+
 #__________________________________________________
 #RATES
 
 def filter_data_rates(dataset,min_sn_ratio=1, min_sn_points=3, min_detections=5, max_phase=20):
+    """
+    Filters the dataset based on multiple criteria:
+    1. Remove all data points with S/N < min_sn_ratio.
+    2. Keep only supernovae with at least min_detections points where S/N ≥ min_sn_points.
+    3. Remove data points with phase values outside [-max_phase, max_phase].
+
+    Args:
+        dataset (skysurvey.DataSet): Original dataset with light curve data.
+        no simulation, because the dataset include the peak times already.
+        min_sn_ratio (float): Minimum S/N ratio for data point filtering.
+        min_sn_points (float): Minimum S/N for counting valid points in supernovae.
+        min_detections (int): Minimum number of valid detections per supernova.
+        max_phase (float): Maximum absolute phase value (days) for filtering.
+
+    Returns:
+        pandas.DataFrame: Filtered dataset.
+    """
+    # Start with the dataset's raw data
+    data = dataset.data
+
+    # Step 1: Remove data points with S/N < min_sn_ratio
+    data = data[data["flux"] / data["fluxerr"] >= min_sn_ratio]
+
+    # Step 2: Keep only supernovae with at least `min_detections` points where S/N >= `min_sn_points`
+    valid_sn_points = (
+        data[data["flux"] / data["fluxerr"] >= min_sn_points]
+        .groupby(dataset._data_index)
+        .size()
+    )
+    valid_indices = valid_sn_points[valid_sn_points >= min_detections].index
+    data = data[data.index.get_level_values("index").isin(valid_indices)]
+
+    # Step 3: calculate phases
+    data["phase"] = data["time"] - data["peak_time"]
+
+    # Step 4: Remove data points with phase outside [-max_phase, max_phase]
+    data = data[abs(data["phase"]) < max_phase]
+
+    return data
+
+
+def process_lightcurve_data_rates(dataset, min_sn_ratio=1, min_sn_points=3, min_detections=5, max_phase=20):
+    """
+    Processes light curve data by filtering and adding calculated columns.
+
+    Args:
+        dataset (skysurvey.DataSet): Light curve dataset.
+        no simulation, because the dataset include the peak times already.
+        min_sn_ratio (float): Minimum S/N ratio for filtering data points.
+        min_sn_points (float): Minimum S/N for counting valid detections per supernova.
+        min_detections (int): Minimum number of valid detections per supernova.
+        max_phase (float): Maximum absolute phase value for filtering.
+
+    Returns:
+        skysurvey.DataSet: Updated dataset with filtered data.
+    """
+    # Apply filters to the data
+    filtered_data = filter_data_rates(dataset, min_sn_ratio, min_sn_points, min_detections, max_phase)
+
+    # Add calculated magnitudes and errors
+    filtered_data["mag"] = filtered_data.apply(
+        lambda row: calculate_magnitude(row["flux"], row["zp"]), axis=1
+    )
+    filtered_data["magerr"] = filtered_data.apply(calculate_magnitude_error, axis=1)
+
+    # Update the dataset with the filtered data
+    dataset.set_data(filtered_data)
+
+    return dataset
+
+
+
+
+#__________________________________________________
+#early peaks
+
+def filter_data_earlypeaks(dataset,min_sn_ratio=1, min_sn_points=3, min_detections=5, max_phase=20):
     """
     Filters the dataset based on multiple criteria:
     1. Remove all data points with S/N < min_sn_ratio.
@@ -231,7 +309,7 @@ def filter_data_rates(dataset,min_sn_ratio=1, min_sn_points=3, min_detections=5,
             model.set(z=rep["z"], x0=rep["x0"], x1=rep["x1"], c=rep["c"])
             flux = model.bandflux('ztfg', times, zp=rep["zp"], zpsys='ab')
             dflux_dt = np.gradient(flux, times)
-            threshold = 1e-1
+            threshold = 1
             positive_deriv_indices = np.where(dflux_dt > threshold)[0]
             if len(positive_deriv_indices) == 0:
                 explosion_phase = np.nan
@@ -253,7 +331,7 @@ def filter_data_rates(dataset,min_sn_ratio=1, min_sn_points=3, min_detections=5,
     return data
 
 
-def process_lightcurve_data_rates(dataset, min_sn_ratio=1, min_sn_points=3, min_detections=5, max_phase=20):
+def process_lightcurve_data_earlypeaks(dataset, min_sn_ratio=1, min_sn_points=3, min_detections=5, max_phase=20):
     """
     Processes light curve data by filtering and adding calculated columns.
 
@@ -269,7 +347,7 @@ def process_lightcurve_data_rates(dataset, min_sn_ratio=1, min_sn_points=3, min_
         skysurvey.DataSet: Updated dataset with filtered data.
     """
     # Apply filters to the data
-    filtered_data = filter_data_rates(dataset, min_sn_ratio, min_sn_points, min_detections, max_phase)
+    filtered_data = filter_data_earlypeaks(dataset, min_sn_ratio, min_sn_points, min_detections, max_phase)
 
     # Add calculated magnitudes and errors
     filtered_data["mag"] = filtered_data.apply(

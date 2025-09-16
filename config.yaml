@@ -1,4 +1,4 @@
-template_directory: "Data/UV SALT 3"
+template_directory: "Data/UV_SALT3_UV_updated_Jan17"
 
 filters:
   transmission_file: "Data/ULTRASAT_TR.dat"
@@ -7,20 +7,20 @@ filters:
 
 simulation:
   template_name: "QinanSalt3"
-  redshift_max: 0.115 
+  redshift_max: 0.13
   start_time: 59000 #mjd
   duration: 365  # in days
   dust_extinction: true
-  magnitude_limit: 27 #to speed up the computation: delete all snia with peak ultrasat mag higher than x
-  plot_results: true
+  magnitude_limit: 300 #to speed up the computation: delete all snia with peak ultrasat mag higher than x
+  plot_results: false
   source_number: 19 #from sources.txt file for LimMag and ZP. 1-35 Spectral Classes of Stars. 19 G5V, 36 BB 2k, 37 4k,38 6k, 39 8k, 40 10k, 41 20k, 42 30k, 43 40k
 
 survey:
-  HighCadence: false
+  HighCadence: true #should the High Cadence be used?
   time_step: 0.0104167  # 15 minutes steps (1/96 day)
   slew_time: 0.00104167 # 1.5 minutes for changing the observed field. 
-  pause_start_hour: 0 #start observation at x o'clock. Default: LC=0, HC=3
-  observation_hours: 3 #observe for x hours. Default: LC=3, HC=21
+  pause_start_hour: 2.75  #start observation at x o'clock. Default: LC=0, HC=2.75
+  observation_hours: 21.25 #observe for x hours. Default: LC=2.75, HC=21.25, 15 minutes slewing time between modes.
   Alternative_Survey: false #Option 1 (false): observing cycle over half year. Option 2 (true): Cycle over 45 days and 10 fields.
   LC_cadence: 4 #visit the fields every x'th day. Only applied when using Option 1. Only 3 (extinction limit applied) or 4 day (not applied) cadence possible.
   
@@ -35,3 +35,4 @@ lightcurves:
   max_phase: 20 #maximum of the phase. Qinan SALT3 is only reliable +-20 days around peak
   plot_overview: true
   plot_show: false
+  plot_lightcurves: true #plot the lightcurves. Takes a lot of time!

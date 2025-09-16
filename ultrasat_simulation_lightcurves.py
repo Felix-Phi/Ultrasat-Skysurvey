@@ -8,6 +8,7 @@ import skysurvey.survey.polygon as surveypolygon
 import pandas as pd
 import matplotlib.pyplot as plt
 import sncosmo
+import numpy as np
 from datetime import datetime
 from multiprocessing import Pool
 warnings.filterwarnings("ignore", category=FutureWarning, module="skysurvey")
@@ -85,7 +86,8 @@ def main():
         magnitude_limit=magnitude_limit,
     )
     print(f"Simulated {len(sniadata)} events passing the magnitude filter.")
-
+    print("sniamodel parameters=")
+    print(sniamodel.template_parameters)
     # Optionally plot simulated data
     if plot_results:
         print("Plotting SNIa data...")
@@ -94,6 +96,7 @@ def main():
     # Convert the drawn data to model instance
     print("Convert drawn data to model instance..")
     sniainstance = convert_drawn_data_to_instance(template_name, sniadata,sniamodel)
+    print("sniainstance parameters="+str(sniainstance.template_parameters))
     print(sniainstance.data.head(10))
     
     #_________________________________________________________-
@@ -170,9 +173,11 @@ def main():
                     pause_start_hour=pause_start_hour,
                 )
         
-            #HC observes only one spot.
-            ra=[57]*len(mjd_times)
-            dec=[-47]*len(mjd_times)
+            period_index = ((mjd_times - start_time) // 182.625).astype(int)
+
+            ra  = np.where(period_index % 2 == 0,  57.00, 248.25)
+            dec = np.where(period_index % 2 == 0, -47.00,  60.40)
+
 
 
         else:
@@ -256,6 +261,7 @@ def main():
 
     # Initialize the lightcurve dataset
     print("Initializing the lightcurve dataset...")
+    print(sniainstance.template_parameters)
     dataset = initialize_dataset(sniainstance, survey)
 
     # Apply high-cadence stacking

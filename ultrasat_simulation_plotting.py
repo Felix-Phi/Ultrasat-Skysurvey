@@ -30,7 +30,7 @@ from survey_plan import (
     zp_func_to_radoffset
 )
 from lightcurves import initialize_dataset,stack_high_cadence_data, process_lightcurve_data,calculate_magnitude
-from plotting import extract_data_for_plotting, plot_survey_overview, generate_unique_filename
+from plotting import extract_data_for_plotting, plot_survey_overview, plot_survey_overview_combined, plot_survey_overview_with_mwlines, generate_unique_filename
 
 
 
@@ -287,6 +287,10 @@ def main():
         lambda x: sniainstance.data.iloc[x]["x1"] if x < len(sniainstance.data) else None
     )
 
+    df_ultrasat_lightcurves["mwebv"] = multiindex_values.map(
+        lambda x: sniainstance.data.iloc[x]["mwebv"] if x < len(sniainstance.data) else None
+    )
+
     ultrasat_lightcurves.set_data(df_ultrasat_lightcurves)
     
     # Display a preview of the processed data
@@ -324,6 +328,32 @@ def main():
                 duration=duration,
                 observation_hours=observation_hours,
                 output_file=f"survey_Overview_"+str(min_detections)+"_"+str(min_sn_points)+".png",
+                plot_show=plot_show,
+                folder="Lightcurves/filtered_overviews"
+            )
+            plot_survey_overview_combined(
+                data=filtered_data,
+                min_sn_points=min_sn_points,
+                min_detections=min_detections,
+                hilocadence=hilocadence,
+                cadence=LC_cadence,
+                Alternative_Survey=Alternative_Survey,
+                duration=duration,
+                observation_hours=observation_hours,
+                output_file=f"survey_Overview_MW_"+str(min_detections)+"_"+str(min_sn_points)+".png",
+                plot_show=plot_show,
+                folder="Lightcurves/filtered_overviews"
+            )
+            plot_survey_overview_with_mwlines(
+                data=filtered_data,
+                min_sn_points=min_sn_points,
+                min_detections=min_detections,
+                hilocadence=hilocadence,
+                cadence=LC_cadence,
+                Alternative_Survey=Alternative_Survey,
+                duration=duration,
+                observation_hours=observation_hours,
+                output_file=f"survey_Overview_MWlines_"+str(min_detections)+"_"+str(min_sn_points)+".png",
                 plot_show=plot_show,
                 folder="Lightcurves/filtered_overviews"
             )

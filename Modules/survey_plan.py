@@ -105,30 +105,27 @@ def generate_field_coordinates_option1(start_day, end_day, time_step, observatio
 
     df_first= df[((df["Dec"] > 0) | (df["Dec"] < -58))]
     df_second= df[((df["Dec"] < 0) | (df["Dec"] > 58))]
-    ra_values_first=df_first["RA"].tolist()
-    dec_values_first=df_first["Dec"].tolist()
-    ra_values_second=df_second["RA"].tolist()
-    dec_values_second=df_second["Dec"].tolist()
-    LowCad_ra=[]
-    LowCad_dec=[]
+    ra_values_first = df_first["RA"].to_numpy()
+    dec_values_first = df_first["Dec"].to_numpy()
+    ra_values_second = df_second["RA"].to_numpy()
+    dec_values_second = df_second["Dec"].to_numpy()
 
-    k=0
-    entries_per_day=observation_hours/(time_step*24)
+    LowCad_ra, LowCad_dec = [], []
+    i_first, i_second = 0, 0                    # ← separate counters
+    entries_per_day   = observation_hours / (time_step * 24)
+
     while len(LowCad_ra) < size:
-        if int(len(LowCad_ra)/(182.5*entries_per_day)) % 2 == 0:
-            LowCad_ra.append(ra_values_first[k])
-            LowCad_dec.append(dec_values_first[k])
-            k=k+1
-            if k>=len(ra_values_first):
-                k=0
+        if int(len(LowCad_ra) / (182.5 * entries_per_day)) % 2 == 0:
+            LowCad_ra.append(ra_values_first[i_first])
+            LowCad_dec.append(dec_values_first[i_first])
+            i_first = (i_first + 1) % len(ra_values_first)
         else:
-            LowCad_ra.append(ra_values_second[k])
-            LowCad_dec.append(dec_values_second[k])
-            k=k+1
-            if k>=len(ra_values_second):
-                k=0
+            LowCad_ra.append(ra_values_second[i_second])
+            LowCad_dec.append(dec_values_second[i_second])
+            i_second = (i_second + 1) % len(ra_values_second)
 
-    return np.array(LowCad_ra[:size]), np.array(LowCad_dec[:size])
+    return np.array(LowCad_ra), np.array(LowCad_dec)
+
 
 def generate_field_coordinates_option2(start_day, end_day, time_step, observation_hours, pause_start_hour):
     """
