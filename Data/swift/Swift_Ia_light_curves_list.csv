@@ -1,0 +1,267 @@
+SNname,HostName,redshift,type,data_file,download_url
+ASASSN-13ch,CGCG 023-030,0.01646,Ia,ASASSN-13ch_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-13ch_uvotB15.1.dat
+ASASSN-13cj,CGCG 051-075,0.018,Ia,ASASSN-13cj_uvotB25.0.nogalsub.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-13cj_uvotB25.0.nogalsub.dat
+ASASSN-13dd,NGC 2765,0.01255,Ia,ASASSN-13dd_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-13dd_uvotB15.1.dat
+ASASSN-14ad,KUG 1237+183,0.026425,Ia,ASASSN-14ad_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14ad_uvotB15.1.dat
+ASASSN-14ar,IC 527,0.02298,Ia,ASASSN-14ar_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14ar_uvotB15.1.dat
+ASASSN-14eu,MCG -01-38-15,0.022722,Ia-pec?,ASASSN-14eu_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14eu_uvotB15.1.dat
+ASASSN-14fa,ESO 416-G39,0.022589,Ia,ASASSN-14fa_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14fa_uvotB15.1.dat
+ASASSN-14kd,2MASX J22532475+0447583,0.026,Ia-91T,ASASSN-14kd_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14kd_uvotB15.1.dat
+ASASSN-14kr,GALEXASC J125413.02-073849.5,0.014,Ia,ASASSN-14kr_uvotB25.0.nogalsub.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14kr_uvotB25.0.nogalsub.dat
+ASASSN-14lp,NGC 4666,0.0051,Ia,ASASSN-14lp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14lp_uvotB15.1.dat
+ASASSN-14lw,GALEXASC J010647.95-465904.1,0.023,Ia,ASASSN-14lw_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-14lw_uvotB15.1.dat
+ASASSN-15aj,NGC 3449,0.010921,Ia,ASASSN-15aj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15aj_uvotB15.1.dat
+ASASSN-15ar,CGCG 439-010,0.02882,Ia,ASASSN-15ar_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15ar_uvotB15.1.dat
+ASASSN-15cq,CGCG 218-007,0.027276,Ia,ASASSN-15cq_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15cq_uvotB15.1.dat
+ASASSN-15ga,NGC 4866,0.006631,Ia-99by,ASASSN-15ga_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15ga_uvotB15.1.dat
+ASASSN-15hy,Unknown,0.025,Ia-SC,ASASSN-15hy_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15hy_uvotB25.0.dat
+ASASSN-15kg,2MASX J08401168-0435369,0.014257,Ia-pec?,ASASSN-15kg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15kg_uvotB15.1.dat
+ASASSN-15od,MCG -01-07-04,0.017989,Ia,ASASSN-15od_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15od_uvotB15.1.dat
+ASASSN-15og, ,0.0437,Ia-CSM,ASASSN-15og_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15og_uvotB15.1.dat
+ASASSN-15pz, ,0.014903,Ia-SC,ASASSN-15pz_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15pz_uvotB15.1.dat
+ASASSN-15qc,UGC 402,0.017649,Ia,ASASSN-15qc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15qc_uvotB15.1.dat
+ASASSN-15rq,GALEXASC J000802.78-363348.1,0.025,Ia,ASASSN-15rq_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15rq_uvotB15.1.dat
+ASASSN-15rw,GALEXASC J021558.44+121415.2,0.0189,Ia,ASASSN-15rw_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15rw_uvotB15.1.dat
+ASASSN-15sf,APMUKS(BJ) B000853.90-064231.3,0.027,Ia,ASASSN-15sf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15sf_uvotB15.1.dat
+ASASSN-15so,NGC 3583,0.007125,Ia,ASASSN-15so_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15so_uvotB15.1.dat
+ASASSN-15ti,2MASX J03051061+3754003,0.016,Ia,ASASSN-15ti_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15ti_uvotB15.1.dat
+ASASSN-15tj,SDSS J075527.63+520911.1,0.022265,Ia,ASASSN-15tj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15tj_uvotB15.1.dat
+ASASSN-15ts,2MASX J03344211-2050502,0.059978,Ia,ASASSN-15ts_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15ts_uvotB15.1.dat
+ASASSN-15uh,KUG 0925+693,0.0135,Ia-91T,ASASSN-15uh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15uh_uvotB15.1.dat
+ASASSN-15ut,NGC 88,0.011471,Ia-pec,ASASSN-15ut_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15ut_uvotB15.1.dat
+ASASSN-15uw,2MASX J02353437-0603496,0.030811,Ia,ASASSN-15uw_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/ASASSN-15uw_uvotB15.1.dat
+CSS140914, ,0.03,Ia,CSS140914_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/CSS140914_uvotB15.1.dat
+Gaia16alf, ,0.094,Ia,Gaia16alf_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/Gaia16alf_uvotB25.0.dat
+Gaia16alf, ,0.094,Ia,Gaia16alf_uvotB25.0.nosub.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/Gaia16alf_uvotB25.0.nosub.dat
+LSQ11ot,CGCG 421-013,0.026,Ia,LSQ11ot_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/LSQ11ot_uvotB15.1.dat
+LSQ12gdj,ESO 472-G007,0.0303,Ia-SC,LSQ12gdj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/LSQ12gdj_uvotB15.1.dat
+LSQ13crf, ,0.06,Ia,LSQ13crf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/LSQ13crf_uvotB15.1.dat
+LSQ13ry, ,0.029857,Ia,LSQ13ry_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/LSQ13ry_uvotB15.1.dat
+PS1-14xw,NGC 6240,0.02448,Ia,PS1-14xw_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PS1-14xw_uvotB15.1.dat
+PS15cku,2MASX J01242239+0335168,0.023,Ia,PS15cku_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PS15cku_uvotB15.1.dat
+PTF09dlc,GALEXASC J214630.04+062506.6,0.068,Ia,PTF09dlc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PTF09dlc_uvotB15.1.dat
+PTF09dnl,SDSS J172341.69+302950.9,0.019,Ia,PTF09dnl_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PTF09dnl_uvotB15.1.dat
+PTF09dnp,WISEA J151925.36+493004.8,0.037,Ia,PTF09dnp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PTF09dnp_uvotB15.1.dat
+PTF10icb,MCG +10-19-01,0.008606,Ia,PTF10icb_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PTF10icb_uvotB15.1.dat
+PTF10mwb,WISEA J171750.10+405252.4,0.03,Ia,PTF10mwb_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/PTF10mwb_uvotB25.0.dat
+SN2005am,NGC 2811,0.0079,Ia,SN2005am_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005am_uvotB15.1.dat
+SN2005bc,NGC 5698,0.01227,Ia,SN2005bc_uvotB25.0.nosub.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005bc_uvotB25.0.nosub.dat
+SN2005cf,MCG -01-39-03,0.00646,Ia,SN2005cf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005cf_uvotB15.1.dat
+SN2005df,NGC 1559,0.00435,Ia,SN2005df_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005df_uvotB15.1.dat
+SN2005gj,SDSS J030111.99-003313.5,0.062,Ia-CSM,SN2005gj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005gj_uvotB15.1.dat
+SN2005hk,UGC 272,0.01299,Ia-02cx,SN2005hk_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005hk_uvotB15.1.dat
+SN2005ke,NGC 1371,0.00488,Ia-91bg,SN2005ke_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005ke_uvotB15.1.dat
+SN2005mz,NGC 1275,0.01756,Ia-91bg,SN2005mz_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2005mz_uvotB15.1.dat
+SN2006E,NGC 5338,0.00272,Ia,SN2006E_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2006E_uvotB15.1.dat
+SN2006X,NGC 4321,0.00524,Ia,SN2006X_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2006X_uvotB15.1.dat
+SN2006dd,NGC 1316,0.00587,Ia,SN2006dd_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2006dd_uvotB15.1.dat
+SN2006dm,MCG -01-60-21,0.02202,Ia,SN2006dm_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2006dm_uvotB15.1.dat
+SN2006ej,NGC 191,0.02045,Ia,SN2006ej_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2006ej_uvotB15.1.dat
+SN2006mr,NGC 1316,0.00587,Ia,SN2006mr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2006mr_uvotB15.1.dat
+SN2007S,UGC 5378,0.01388,Ia,SN2007S_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007S_uvotB15.1.dat
+SN2007af,NGC 5584,0.005464,Ia,SN2007af_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007af_uvotB15.1.dat
+SN2007ax,NGC 2577,0.006861,Ia-91bg,SN2007ax_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007ax_uvotB15.1.dat
+SN2007bm,NGC 3672,0.006211,Ia,SN2007bm_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007bm_uvotB15.1.dat
+SN2007co,MCG +05-43-16,0.016962,Ia,SN2007co_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007co_uvotB15.1.dat
+SN2007cq,2MASX J22144070+0504435,0.025,Ia-91T,SN2007cq_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007cq_uvotB15.1.dat
+SN2007cv,IC 2597,0.007562,Ia,SN2007cv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007cv_uvotB15.1.dat
+SN2007gi,NGC 4036,0.00482,Ia,SN2007gi_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007gi_uvotB15.1.dat
+SN2007on,NGC 1404,0.006494,Ia,SN2007on_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007on_uvotB15.1.dat
+SN2007sr,NGC 4038,0.005688,Ia,SN2007sr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2007sr_uvotB15.1.dat
+SN2008A,NGC 634,0.016428,Ia-02cx,SN2008A_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008A_uvotB15.1.dat
+SN2008Q,NGC 524,0.007935,Ia,SN2008Q_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008Q_uvotB15.1.dat
+SN2008ae,IC 577,0.030002,Ia-02cx,SN2008ae_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008ae_uvotB15.1.dat
+SN2008cg,PGC 91487,0.036,Ia-CSM?,SN2008cg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008cg_uvotB15.1.dat
+SN2008dx,NGC 4898A,0.035,Ia-91bg,SN2008dx_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008dx_uvotB15.1.dat
+SN2008ec,NGC 7469,0.016317,Ia,SN2008ec_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008ec_uvotB15.1.dat
+SN2008ge,NGC 1527,0.004043,Ia,SN2008ge_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008ge_uvotB15.1.dat
+SN2008ha,UGC 12682,0.004647,Ia,SN2008ha_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008ha_uvotB15.1.dat
+SN2008hs,NGC 910,0.017369,Ia,SN2008hs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008hs_uvotB15.1.dat
+SN2008hv,NGC 2765,0.012549,Ia,SN2008hv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2008hv_uvotB15.1.dat
+SN2009Y,NGC 5728,0.009353,Ia,SN2009Y_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009Y_uvotB15.1.dat
+SN2009an,NGC 4332,0.009233,Ia,SN2009an_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009an_uvotB15.1.dat
+SN2009cz,NGC 2789,0.021138,Ia,SN2009cz_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009cz_uvotB15.1.dat
+SN2009dc,UGC 10064,0.021391,Ia-SC,SN2009dc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009dc_uvotB15.1.dat
+SN2009gf,NGC 5525,0.018523,Ia,SN2009gf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009gf_uvotB15.1.dat
+SN2009ig,NGC 1015,0.00877,Ia,SN2009ig_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009ig_uvotB15.1.dat
+SN2009jb,A172341+3029,0.03,Ia,SN2009jb_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009jb_uvotB15.1.dat
+SN2009jr,IC 1320,0.016548,Ia,SN2009jr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2009jr_uvotB15.1.dat
+SN2010Y,NGC 3392,0.01086,Ia,SN2010Y_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010Y_uvotB15.1.dat
+SN2010ae,ESO 162-G17,0.003662,Ia-p,SN2010ae_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010ae_uvotB15.1.dat
+SN2010bv,ESO 533-G4,0.008659,Ia,SN2010bv_uvotB25.0.nosub.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010bv_uvotB25.0.nosub.dat
+SN2010cr,NGC 5177,0.02157,Ia,SN2010cr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010cr_uvotB15.1.dat
+SN2010el,NGC 1566,0.005017,Ia-p,SN2010el_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010el_uvotB15.1.dat
+SN2010ev,NGC 3244,0.009211,Ia,SN2010ev_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010ev_uvotB15.1.dat
+SN2010fy,A052452-4646,0.049,Ia,SN2010fy_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010fy_uvotB15.1.dat
+SN2010gn,SDSS J171750.05+405252.5,0.0365,Ia,SN2010gn_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010gn_uvotB15.1.dat
+SN2010gp,NGC 6240,0.02448,Ia,SN2010gp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010gp_uvotB15.1.dat
+SN2010hh,NGC 6524,0.019006,Ia,SN2010hh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010hh_uvotB15.1.dat
+SN2010ih,NGC 2325,0.007288,Ia,SN2010ih_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010ih_uvotB15.1.dat
+SN2010jn,NGC 2929,0.025047,Ia ,SN2010jn_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010jn_uvotB15.1.dat
+SN2010kg,NGC 1633,0.016642,Ia,SN2010kg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010kg_uvotB15.1.dat
+SN2010ko,NGC 1954,0.010441,Ia,SN2010ko_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2010ko_uvotB15.1.dat
+SN2011B,NGC 2655,0.00467,Ia,SN2011B_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011B_uvotB15.1.dat
+SN2011M,UGC 3218,0.017432,Ia,SN2011M_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011M_uvotB15.1.dat
+SN2011aa,UGC 3906,0.012355,Ia,SN2011aa_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011aa_uvotB15.1.dat
+SN2011ao,IC 2973,0.010706,Ia,SN2011ao_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011ao_uvotB15.1.dat
+SN2011at,MCG -02-24-27,0.006758,Ia,SN2011at_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011at_uvotB15.1.dat
+SN2011ay,NGC 2315,0.021,Ia-99aa?02cx?,SN2011ay_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011ay_uvotB15.1.dat
+SN2011by,NGC 3972,0.002843,Ia,SN2011by_uvotB15.1.all.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011by_uvotB15.1.all.dat
+SN2011by,NGC 3972,0.002843,Ia,SN2011by_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011by_uvotB15.1.dat
+SN2011de,UGC 10018,0.029187,Ia,SN2011de_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011de_uvotB15.1.dat
+SN2011dm,UGC 11861,0.00494,Ia,SN2011dm_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011dm_uvotB15.1.dat
+SN2011dn,UGC 11501,0.025272,Ia-91T,SN2011dn_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011dn_uvotB15.1.dat
+SN2011eh,NGC 3613,0.006785,Ia-91bg,SN2011eh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011eh_uvotB15.1.dat
+SN2011ek,NGC 918,0.005027,Ia-91bg,SN2011ek_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011ek_uvotB15.1.dat
+SN2011fe,M101,0.000804,Ia,SN2011fe_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011fe_uvotB15.1.dat
+SN2011fs,UGC 11975,0.020914,Ia,SN2011fs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011fs_uvotB15.1.dat
+SN2011gu,NGC 7485,0.019033,Ia,SN2011gu_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011gu_uvotB15.1.dat
+SN2011hb,NGC 7674,0.028924,Ia,SN2011hb_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011hb_uvotB15.1.dat
+SN2011ia,MCG +11-12-23,0.019,Ia,SN2011ia_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011ia_uvotB15.1.dat
+SN2011im,NGC 7364,0.016228,Ia,SN2011im_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011im_uvotB15.1.dat
+SN2011iv,NGC 1404,0.006494,Ia,SN2011iv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2011iv_uvotB15.1.dat
+SN2012G,A123936+1635,0.026635,Ia,SN2012G_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012G_uvotB15.1.dat
+SN2012T,NGC 5421,0.026315,Ia,SN2012T_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012T_uvotB15.1.dat
+SN2012V,NGC 6829,0.010964,Ia,SN2012V_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012V_uvotB15.1.dat
+SN2012Z,NGC 1309,0.007125,Ia-02cx,SN2012Z_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012Z_uvotB15.1.dat
+SN2012bl,ESO 234-G19,0.018706,Ia,SN2012bl_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012bl_uvotB15.1.dat
+SN2012cg,NGC 4424,0.001458,Ia-99aa,SN2012cg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012cg_uvotB15.1.dat
+SN2012cp,UGC 8713,0.016531,Ia,SN2012cp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012cp_uvotB15.1.dat
+SN2012cu,NGC 4772,0.003469,Ia,SN2012cu_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012cu_uvotB25.0.dat
+SN2012da,PGC 83768,0.018012,Ia,SN2012da_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012da_uvotB15.1.dat
+SN2012dn,ESO 462-G16,0.010187,Ia-SC,SN2012dn_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012dn_uvotB15.1.dat
+SN2012fr,NGC 1365,0.005457,Ia,SN2012fr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012fr_uvotB15.1.dat
+SN2012hj,MCG +08-20-89,0.024597,Ia,SN2012hj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012hj_uvotB15.1.dat
+SN2012hr,ESO 121-G26,0.007562,Ia,SN2012hr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012hr_uvotB15.1.dat
+SN2012ht,NGC 3447,0.003559,Ia,SN2012ht_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012ht_uvotB15.1.dat
+SN2012ij,MCG +03-30-38,0.010998,Ia-91bg,SN2012ij_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2012ij_uvotB15.1.dat
+SN2013E,IC 2532,0.009413,Ia,SN2013E_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013E_uvotB15.1.dat
+SN2013Q,NGC 7753,0.017239,Ia,SN2013Q_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013Q_uvotB15.1.dat
+SN2013aa,NGC 5643,0.003999,Ia,SN2013aa_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013aa_uvotB15.1.dat
+SN2013ag,A125135+2637,0.02129,Ia,SN2013ag_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013ag_uvotB15.1.dat
+SN2013bs,NGC 6343,0.027612,Ia,SN2013bs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013bs_uvotB15.1.dat
+SN2013cg,NGC 2891,0.007952,Ia,SN2013cg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013cg_uvotB15.1.dat
+SN2013cs,ESO 576-G17,0.00924,Ia,SN2013cs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013cs_uvotB15.1.dat
+SN2013cv,A162243+1857,0.035,Ia,SN2013cv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013cv_uvotB15.1.dat
+SN2013dy,NGC 7250,0.003889,Ia,SN2013dy_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013dy_uvotB15.1.dat
+SN2013eh,A161609+3832,0.034999,Ia,SN2013eh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013eh_uvotB15.1.dat
+SN2013eu,UGC 5609,0.009266,Ia,SN2013eu_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013eu_uvotB15.1.dat
+SN2013ex,NGC 1954,0.010441,Ia,SN2013ex_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013ex_uvotB15.1.dat
+SN2013fn,IC 1342,0.027,Ia,SN2013fn_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013fn_uvotB15.1.dat
+SN2013fw,NGC 7042,0.01695,Ia,SN2013fw_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013fw_uvotB15.1.dat
+SN2013fy,ESO 287-G40,0.03,Ia,SN2013fy_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013fy_uvotB15.1.dat
+SN2013gh,NGC 7183,0.0088,Ia,SN2013gh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013gh_uvotB15.1.dat
+SN2013gs,UGC 5066,0.016888,Ia,SN2013gs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013gs_uvotB15.1.dat
+SN2013gy,NGC 1418,0.014023,Ia,SN2013gy_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013gy_uvotB15.1.dat
+SN2013hh,UGC 6483,0.012989,Ia-91T,SN2013hh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013hh_uvotB15.1.dat
+SN2013hn,IC 4329,0.01514,Ia,SN2013hn_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2013hn_uvotB15.1.dat
+SN2014I,ESO 487-G36,0.03,Ia,SN2014I_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014I_uvotB15.1.dat
+SN2014J,NGC 3034,0.000677,Ia,SN2014J_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014J_uvotB15.1.dat
+SN2014R,UGC 5055,0.025,Ia,SN2014R_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014R_uvotB15.1.dat
+SN2014ai,NGC 2832,0.023176,Ia,SN2014ai_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014ai_uvotB15.1.dat
+SN2014ao,NGC 2615,0.014083,Ia,SN2014ao_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014ao_uvotB15.1.dat
+SN2014ap,MCG +04-27-50,0.023516,Ia,SN2014ap_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014ap_uvotB15.1.dat
+SN2014at,NGC 7119B,0.032242,Ia,SN2014at_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014at_uvotB15.1.dat
+SN2014ba,NGC 7410,0.005841,Ia-91bg,SN2014ba_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014ba_uvotB15.1.dat
+SN2014bv,NGC 4386,0.005594,Ia,SN2014bv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014bv_uvotB15.1.dat
+SN2014cd,NGC 1578,0.020608,Ia,SN2014cd_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014cd_uvotB15.1.dat
+SN2014dg,UGC 2855,0.004003,Ia,SN2014dg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014dg_uvotB15.1.dat
+SN2014dt,M61,0.005224,Ia-02cx,SN2014dt_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014dt_uvotB15.1.dat
+SN2014eg,ESO 154-G10,0.018633,Ia-91T,SN2014eg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014eg_uvotB15.1.dat
+SN2014ek,UGC 12850,0.023126,Ia-02cx,SN2014ek_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014ek_uvotB15.1.dat
+SN2014gd, ,0.018283,Ia,SN2014gd_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2014gd_uvotB15.1.dat
+SN2015F,NGC 2442,0.00489,Ia,SN2015F_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015F_uvotB15.1.dat
+SN2015I,NGC 2357,0.0076,Ia,SN2015I_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015I_uvotB15.1.dat
+SN2015M,A130032+2758,0.0231,Ia-91T,SN2015M_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015M_uvotB15.1.dat
+SN2015N,UGC 11797,0.01492,Ia,SN2015N_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015N_uvotB15.1.dat
+SN2015ak,ESO 108-G21,0.01037,Ia,SN2015ak_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015ak_uvotB15.1.dat
+SN2015ar,NGC 383,0.017005,Ia,SN2015ar_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015ar_uvotB15.1.dat
+SN2015bo,NGC 5490,0.016195,Ia-91bg,SN2015bo_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015bo_uvotB15.1.dat
+SN2015bp,NGC 5839,0.004069,Ia-91bg,SN2015bp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015bp_uvotB15.1.dat
+SN2015bq,PGC 41898,0.028178,Ia-91T,SN2015bq_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2015bq_uvotB15.1.dat
+SN2016F,KUG 0136+335,0.016138,Ia,SN2016F_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016F_uvotB15.1.dat
+SN2016adi,NGC 5292,0.015,Ia,SN2016adi_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016adi_uvotB15.1.dat
+SN2016aix,LCRS B014209.4-420839,0.029,Ia-91T,SN2016aix_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016aix_uvotB15.1.dat
+SN2016ajf,NGC 1278,0.0203,Ia-91bg,SN2016ajf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ajf_uvotB15.1.dat
+SN2016aqt,PGC 4384817,0.05,Ia-SC,SN2016aqt_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016aqt_uvotB15.1.dat
+SN2016arc,,,Ia,SN2016arc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016arc_uvotB15.1.dat
+SN2016arc,NGC 1272,0.012725,Ia ,SN2016arc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016arc_uvotB15.1.dat
+SN2016asf,KUG 0647+311,0.021,Ia,SN2016asf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016asf_uvotB15.1.dat
+SN2016bfu,IC 2150,0.0104,Ia-91bg,SN2016bfu_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016bfu_uvotB15.1.dat
+SN2016blc,GALEXASC J104848.62-201544.1,0.012,Ia,SN2016blc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016blc_uvotB15.1.dat
+SN2016blk, ,0.02997,Iapec,SN2016blk_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016blk_uvotB15.1.dat
+SN2016bln,NGC 5221,0.0235,Ia-91T/99aa,SN2016bln_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016bln_uvotB15.1.dat
+SN2016bqs,CGCG 077-110,0.032916,Ia,SN2016bqs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016bqs_uvotB15.1.dat
+SN2016ccj,SDSS J171023.62+262350.3,0.041,Ia-SC,SN2016ccj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ccj_uvotB15.1.dat
+SN2016ccz,MRK 685,0.015,Ia,SN2016ccz_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ccz_uvotB15.1.dat
+SN2016cnx, ,0.029444,Ia,SN2016cnx_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016cnx_uvotB15.1.dat
+SN2016coj,NGC 4125,0.004483,Ia,SN2016coj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016coj_uvotB15.1.dat
+SN2016daj,MCG +03-06-31,0.032,Ia,SN2016daj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016daj_uvotB15.1.dat
+SN2016dxv, ,0.02,Ia,SN2016dxv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016dxv_uvotB15.1.dat
+SN2016eii,ESO 54-IG2,0.036,Ia,SN2016eii_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016eii_uvotB15.1.dat
+SN2016eiy,ESO 509-IG64,0.008663,Ia,SN2016eiy_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016eiy_uvotB15.1.dat
+SN2016eja,2MASX J22253147+3859010,0.04,Ia,SN2016eja_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016eja_uvotB15.1.dat
+SN2016ekg,ESO 466-G32,0.017,Ia,SN2016ekg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ekg_uvotB15.1.dat
+SN2016ekt, ,0.017,Ia,SN2016ekt_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ekt_uvotB15.1.dat
+SN2016eoa,NGC 83,0.020771,Ia,SN2016eoa_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016eoa_uvotB15.1.dat
+SN2016euj,ESO 479-G7,0.017,Ia,SN2016euj_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016euj_uvotB15.1.dat
+SN2016fej,NGC 6942,0.010914,Ia,SN2016fej_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016fej_uvotB15.1.dat
+SN2016ffh,,0.018,Ia,SN2016ffh_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ffh_uvotB25.0.dat
+SN2016gfr,PGC 1693718,0.014,Ia,SN2016gfr_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016gfr_uvotB15.1.dat
+SN2016gsb,ESO 555-G29,0.0097,Ia,SN2016gsb_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016gsb_uvotB15.1.dat
+SN2016gxp,NGC 51,0.0186,Ia-pec,SN2016gxp_uvotB20.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016gxp_uvotB20.0.dat
+SN2016hnk,,0.016,Ia,SN2016hnk_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016hnk_uvotB15.1.dat
+SN2016ipf,,0.021,Ia,SN2016ipf_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2016ipf_uvotB25.0.dat
+SN2017awz,,0.022,Ia-91T-like,SN2017awz_uvotB21.4.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017awz_uvotB21.4.dat
+SN2017cbv,,0.003999,Ia,SN2017cbv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017cbv_uvotB15.1.dat
+SN2017cyy,,0.0098,Ia,SN2017cyy_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017cyy_uvotB15.1.dat
+SN2017erp,,0.006174,Ia,SN2017erp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017erp_uvotB15.1.dat
+SN2017fgc,,0.008,Ia,SN2017fgc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017fgc_uvotB15.1.dat
+SN2017fzw,,0.0054,Ia-91bg-like,SN2017fzw_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017fzw_uvotB15.1.dat
+SN2017gah,,0.0089,Ia,SN2017gah_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017gah_uvotB15.1.dat
+SN2017gvp,,0.023,Ia,SN2017gvp_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2017gvp_uvotB25.0.dat
+SN2018agk,,0.026128,Ia,SN2018agk_uvotB23.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018agk_uvotB23.1.dat
+SN2018aoz,,0.0058,Ia,SN2018aoz_uvotB22.18.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018aoz_uvotB22.18.dat
+SN2018evt,,0.029,Ia,SN2018evt_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018evt_uvotB25.0.dat
+SN2018gv,,0.0053,Ia,SN2018gv_uvotB22.18.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018gv_uvotB22.18.dat
+SN2018hkx,,0.025,Ia,SN2018hkx_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018hkx_uvotB25.0.dat
+SN2018ilu,,0.03,Ia,SN2018ilu_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018ilu_uvotB25.0.dat
+SN2018isq,,0.007599,Ia,SN2018isq_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018isq_uvotB15.1.dat
+SN2018oh,,0.012,Ia,SN2018oh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018oh_uvotB15.1.dat
+SN2018xx,,,Ia,SN2018xx_uvotB21.4.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018xx_uvotB21.4.dat
+SN2018yu,,0.008,Ia,SN2018yu_uvotB22.18.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2018yu_uvotB22.18.dat
+SN2019arb,,0.013696,Ia,SN2019arb_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2019arb_uvotB25.0.dat
+SN2019ein,,0.00775,Ia,SN2019ein_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2019ein_uvotB25.0.dat
+SN2019gbx,,0.013,Ia,SN2019gbx_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2019gbx_uvotB25.0.dat
+SN2019np,,0.00452,Ia,SN2019np_uvotB22.19.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2019np_uvotB22.19.dat
+SN2019yvq,,0.009,Ia,SN2019yvq_uvotB23.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2019yvq_uvotB23.1.dat
+SN2020hvf,,0.005838,Ia,SN2020hvf_uvotB15.1.dat.nosub,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020hvf_uvotB15.1.dat.nosub
+SN2020jgl,,0.006758,Ia,SN2020jgl_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020jgl_uvotB15.1.dat
+SN2020nlb,,,Ia,SN2020nlb_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020nlb_uvotB25.0.dat
+SN2020nvb,,0.002939,Ia,SN2020nvb_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020nvb_uvotB25.0.dat
+SN2020pst,,0.046,Ia,SN2020pst_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020pst_uvotB15.1.dat
+SN2020szr,,0.02581,Ia,SN2020szr_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020szr_uvotB25.0.dat
+SN2020tkp,,0.035,Ia,SN2020tkp_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020tkp_uvotB15.1.dat
+SN2020uxz,,0.008246,Ia,SN2020uxz_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2020uxz_uvotB15.1.dat
+SN2021aefx,,0.005,Ia,SN2021aefx_uvotB23.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021aefx_uvotB23.1.dat
+SN2021fxy,,0.0094,Ia,SN2021fxy_uvotB21.4.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021fxy_uvotB21.4.dat
+SN2021ghc,,0.046217,Ia,SN2021ghc_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021ghc_uvotB15.1.dat
+SN2021hpr,,0.009346,Ia,SN2021hpr_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021hpr_uvotB25.0.dat
+SN2021jad,,0.0055,Ia,SN2021jad_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021jad_uvotB25.0.dat
+SN2021mim,,0.03812,Ia,SN2021mim_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021mim_uvotB15.1.dat
+SN2021pit,,0.003898,Ia,SN2021pit_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021pit_uvotB25.0.dat
+SN2021zny,,0.0266,Ia-SC,SN2021zny_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2021zny_uvotB25.0.dat
+SN2022hrs,,0.0047,Ia,SN2022hrs_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2022hrs_uvotB15.1.dat
+SN2022idx,,0.0141,Ia-91T-like,SN2022idx_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2022idx_uvotB15.1.dat
+SN2022ihz,,0.006,Ia-91bg-like,SN2022ihz_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2022ihz_uvotB15.1.dat
+SN2022ilv,,0.031,Ia-SC,SN2022ilv_uvotB22.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2022ilv_uvotB22.1.dat
+SN2022vqz,,0.016995,Ia-pec,SN2022vqz_uvotB22.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2022vqz_uvotB22.1.dat
+SN2022ywf,,0.0078,Ia,SN2022ywf_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2022ywf_uvotB15.1.dat
+SN2023bee,,0.006698,Ia,SN2023bee_uvotB25.0.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SN2023bee_uvotB25.0.dat
+SNF20080514002, ,0.0221,Ia,SNF20080514002_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SNF20080514002_uvotB15.1.dat
+SNF20080720001, ,0.021,Ia,SNF20080720001_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/SNF20080720001_uvotB15.1.dat
+iPTF13asv,,,Ia,iPTF13asv_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/iPTF13asv_uvotB15.1.dat
+iPTF13dge,NGC 1762,0.015854,Ia,iPTF13dge_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/iPTF13dge_uvotB15.1.dat
+iPTF13ebh, ,0.013269,Ia,iPTF13ebh_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/iPTF13ebh_uvotB15.1.dat
+iPTF14atg, ,0.021405,Ia,iPTF14atg_uvotB15.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/iPTF14atg_uvotB15.1.dat
+iPTF14bdn,UGC 8503,0.01588,Ia-99aa,iPTF14bdn_uvotB23.1.dat,https://raw.githubusercontent.com/pbrown801/SOUSA/master/data/iPTF14bdn_uvotB23.1.dat
